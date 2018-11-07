@@ -1,81 +1,111 @@
-# Millidocs Theme
+# White Paper
 
-Simple documentation theme for Jekyll featuring [Milligram CSS framework](http://milligram.io/), [PrismJS syntax highlighter](http://prismjs.com/) and [LunrJS search](https://lunrjs.com/).
+**White Paper** is a theme for Jekyll. It is built keeping content in focus and is best for writers/developers who also like to share code with their essays.
 
-One of the core features is a full text client side search and full responsiveness. It has zero dependencies with other gems and should be easily build with Github.
+# White Paper in Action
+
+- Home page
+
+![home](https://cldup.com/FRewyA-EEI-3000x3000.png)
+
+
+- Post Detail View
+
+![post detail](https://cldup.com/mERDZPBshM-3000x3000.png)
+
+## How to use White Paper
+
+Fork the repo to your account by clicking the button on the top right as shown in the image:
+
+![fork](https://cldup.com/vOF0oaUkh5-3000x3000.png) and then where you want to fork it as shown below.
+
+Next, Go the the project settings and change the repository name to `<username>.github.io` where username is your username.
+
+Change these entries in the `_config.yml` file:
+
+Also, change this line in head.html [link](https://github.com/vinitkumar/white-paper/blob/9ad021a8f94c6240351bd57eda301b5f207e554e/_includes/head.html#L28)
+
+```html
+<!-- From this -->
+<link rel="stylesheet" href=" {{ '/css/main.min.css' | relative_url }}" type="text/css" />
+<!-- To this -->
+<link rel="stylesheet" href=" {{ '/css/main.min.css' | absolute_url }}" type="text/css" />
+
+```
+
+
+This will make sure that the path of CSS is correct and the theme loads correctly.
+
+```yml
+master_repo: false
+url: "<username>.github.io"
+rtl: false  # change to true if posts is in Arabic/other Right to left language.
+```
+Also, change all other fields in the `_config.yml` file to your choice.
 
 ## Installation
 
-Add this line to your Jekyll site's `Gemfile`:
+### Local Development
 
-```ruby
-gem "millidocs"
+This theme requires you to install couple of tools first to setup jekyll locally.
+
+```$
+git clone git@github.com:vinitkumar/white-paper.git
+
+# If you have ruby installed.
+gem install jekyll bundler
+
+# If you have node installed.
+npm install
+sudo npm install -g grunt-cli  #to get the task runner for grunt.
+bundle install
+jekyll serve
+
+# on running the serve script, the site will be live on
+http://127.0.0.1:4000
+```
+This theme uses grunt to concat & minify the css for best performance. In order to prepare the css build. Run `grunt`
+It will create a main.min.css file in the css folder.
+
+### Switch Syntax Highlighting.
+
+This theme also provides syntax highlighting in different theme. Inside css folder, there is a syntax folder.
+
+```$
+.
+├── emacs.css
+├── github.css
+├── monokai.css
+├── native.css
+├── syntax.css
+└── vim.css
+
 ```
 
-Adapt your Jekyll site config `_config.yml`:
+Now in the gruntfiles.js
 
-```yaml
-  title: My Docs Page Title
-  description: MY description
-  url: "https://base/url/site"
-  theme: millidocs
-
-  markdown: kramdown
-  kramdown:
-    syntax_highlighter_opts:
-      disable : true
-
-  exclude:
-    - Gemfile
-    - Gemfile.lock
-    - README.md
+```js
+concat: {
+  dist: {
+    src: [
+      'css/base.css',
+      'css/sytax/emacs.css', // change this to another theme if you prefer, like vim.css and run grunt
+      'css/octicons.css'
+    ],
+    dest: 'css/<%= pkg.name %>.add.css'
+  }
+}
 ```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install millidocs
-
-
-## Usage
-
-### Github Pages
-
-You can use this theme by simply adding `remote_theme: alexander-heimbuch/millidocs` to your `_config.yml` (Thanks to @kogli for the hint).
-
-### Available Themes
-
-This theme is made for _pages_ only and doesn't support _posts_ by default. So the only available layouts are `default` and `page`.
-
-### Navigation
-
-The navigation supports especially only one level. If you need deep nested structures you propably should use a larger documentation system like [GitBook](https://www.gitbook.com/).
-
-Not every page by default is part of the navigation. If you want to add a page to the navigation you have to add the `navigation` attribute with a desired `index`:
-
-```
----
-layout: page
-title: Navigation
-navigation: 2
----
-```
-
-The navigation `index` is starting with 1 representing the first item. 
-
-
-## Development
-
-To set up your environment to develop this theme, run `bundle install`.
-
-Your theme is setup just like a normal Jekyll site! To test your theme, run `bundle exec jekyll serve` and open your browser at `http://localhost:4000`. This starts a Jekyll server using your theme. Add pages, documents, data, etc. like normal to test your theme's contents. As you make modifications to your theme and to your content, your site will regenerate and you should see the changes in the browser after a refresh, just like normal.
-
-When your theme is released, only the files in `_layouts`, `_includes`, and `_sass` tracked with Git will be released.
 
 ## License
+* see [LICENSE](https://github.com/vinitkumar/white-paper/blob/gh-pages/LICENSE) file
 
-The theme is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+## Version
+* Version 4.0.0
 
+## Contact
+#### Developer
+
+* Homepage: http://vinitkumar.me
+* e-mail: vinit1414.08@bitmesra.ac.in
+* Twitter: [@vinitkme](https://twitter.com/vinitkme "vinitkme on twitter")

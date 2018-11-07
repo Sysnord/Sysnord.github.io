@@ -1,2 +1,7 @@
 source "https://rubygems.org"
-gemspec
+
+gem "jekyll-paginate"
+gem "jekyll-gist"
+gem "jekyll"
+gem 'jekyll-feed'
+gem "rouge"
