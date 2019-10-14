@@ -22,11 +22,10 @@ owner:
   name:           whitepaper
   avatar:         "https://drive.google.com/file/d/124elqtgT2DjOiDWNSfumQ9sJdTev-WbP/view?usp=sharing"
   email:          "sysnord@gmail.com"
-  # Social networking links used in footer. Update and remove as you like.
-  twitter: vinitkme
+  # Social networking links used in footer. Update and remove as you like.  
   github: https://github.com/sysnord
   stackexchange: https://stackoverflow.com/users/859112/vinit-kumar?tab=profile
-  linkedin: www.linkedin.com/in/sysnord
+  linkedin: https://www.linkedin.com/in/sysnord/
   # For Google Authorship https://plus.google.com/authorship
   google_plus:
 
