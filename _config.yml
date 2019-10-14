@@ -1,9 +1,8 @@
 name: Around Oracle
 description: >
-    A simple jekyll theme aimed at programmers who like clean interface to write posts
-    and show off some code.
+    Блог по технологиям Oracle
 about: >
-    At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.
+    Oracle blog, Oracle developer, Apex.
 
 master_repo: false
 url: "https://sysnord.github.io/"
@@ -23,8 +22,7 @@ owner:
   avatar:         "https://drive.google.com/file/d/124elqtgT2DjOiDWNSfumQ9sJdTev-WbP/view?usp=sharing"
   email:          "sysnord@gmail.com"
   # Social networking links used in footer. Update and remove as you like.  
-  github: https://github.com/sysnord
-  stackexchange: https://stackoverflow.com/users/859112/vinit-kumar?tab=profile
+  github: https://github.com/sysnord  
   linkedin: https://www.linkedin.com/in/sysnord/
   # For Google Authorship https://plus.google.com/authorship
   google_plus:
