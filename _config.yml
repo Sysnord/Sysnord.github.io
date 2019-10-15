@@ -2,7 +2,7 @@ name: Around Oracle
 description: >
     Блог по технологиям Oracle
 about: >
-    Oracle blog, Oracle developer, Apex.
+    Привет всем.
 
 master_repo: false
 url: "https://sysnord.github.io/"
@@ -18,7 +18,7 @@ disqus_shortname:
 
 rtl: false
 owner:
-  name:           whitepaper
+  name:           Tikhomirov Alexander aka [Sysnord]
   avatar:         "https://sun9-45.userapi.com/c853424/v853424168/1236f9/bB5N92zGPkU.jpg"
   email:          "sysnord@gmail.com"
   # Social networking links used in footer. Update and remove as you like.  
