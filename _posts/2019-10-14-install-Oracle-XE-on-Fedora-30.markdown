@@ -9,12 +9,13 @@ tags: [Oracle, XE, Linux, Fedora]
 
 #### Начинаем со скачивания необходимого ПО
 
-* Качаем [RPM файлы](https://www.oracle.com/database/technologies/appdev/xe/quickstart.html) с официального сайта Oracle. Нас интересует раздел Installing Oracle Database XE и часть Red Hat compatible Linux distribution.
-* Качаем пакет [compat-libcap1](http://mirror.centos.org/centos/7/os/x86_64/Packages/compat-libcap1-1.10-7.el7.x86_64.rpm) из репозитория CentOS. Без установки этого пакета установка пакета preinstall от Oracle свалится с ошибкой _nothing provides compat-libcap1 needed by oracle..._.
+Качаем [RPM файлы](https://www.oracle.com/database/technologies/appdev/xe/quickstart.html) с официального сайта Oracle. Нас интересует раздел Installing Oracle Database XE и часть Red Hat compatible Linux distribution.
+
+Качаем пакет [compat-libcap1](http://mirror.centos.org/centos/7/os/x86_64/Packages/compat-libcap1-1.10-7.el7.x86_64.rpm) из репозитория CentOS. Без установки этого пакета установка пакета preinstall от Oracle свалится с ошибкой _nothing provides compat-libcap1 needed by oracle..._.
 
 #### Приступаем к установке
 
-Переключаемся на суперпользователя
+Переключаемся на суперпользователя и все команды выполняем под ним
 
 `su`
 
@@ -42,7 +43,7 @@ tags: [Oracle, XE, Linux, Fedora]
 
 #### Настройка системы для запуска СУБД
 
-Теперь необходимо прописать переменные среды. Открываем файл _etc/profile_ любым редактором (я пользуюсь Midnight Commander) и в конце файла добавляем строки:
+Теперь необходимо прописать переменные среды. Открываем файл _etc/profile_ любым редактором (я пользуюсь встроенным редактором в Midnight Commander) и в конце файла добавляем строки:
 ```
 export ORACLE_HOME=/opt/oracle/product/18c/dbhomeXE
 export ORACLE_SID=XE
@@ -92,7 +93,7 @@ _SQL>_
 Select * from all_users;
 {% endhighlight %}
 
-Должно вывести пользователей СУБД
+Должно вывести пользователей СУБД.
 
 Если отображается то все работает корректно и можно попробовать подключаться извне.
 
