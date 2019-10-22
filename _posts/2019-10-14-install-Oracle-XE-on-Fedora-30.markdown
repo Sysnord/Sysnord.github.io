@@ -63,6 +63,10 @@ pathmunge $ORACLE_HOME/bin after
 
 `firewall-cmd --permanent --add-port 1521/tcp`
 
+Перезагружаем фаерволл
+
+`firewall-cmd --reload`
+
 Проверяем, что порт открылся:
 
 `firewall-cmd --list-ports`
