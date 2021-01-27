@@ -3,6 +3,8 @@ title: "Установка Oracle Linux 8.0"
 layout: "post"
 tags: [Oracle, Linux]
 ---
+Устанавливаем Oracle Linux 8.0. Для будующей установки СУБД Oracle XE и APEX.
+
 
 Скачать образ можно на [сайте Oracle](https://yum.oracle.com/oracle-linux-downloads.html).
 
